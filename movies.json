@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "titulo": "El Padrino",
+      "duracion": 175,
+      "genero": ["Drama","Crimen"],
+      "director": "Francis Ford Coppola",
+      "año": 1972,
+      "sinopsis": "La historia de la familia Corleone y su participación en el mundo del crimen organizado."
+    },
+    {
+      "id": 2,
+      "titulo": "Titanic",
+      "duracion": 195,
+      "genero": ["Drama","Romance"],
+      "director": "James Cameron",
+      "año": 1997,
+      "sinopsis": "Un épico romance entre Jack y Rose que se desarrolla en el trágico viaje inaugural del Titanic."
+    },
+    {
+      "id": 3,
+      "titulo": "Star Wars: Episodio IV - Una Nueva Esperanza",
+      "duracion": 185,
+      "genero": ["Aventura","Ficcion"],
+      "director": "George Lucas",
+      "año": 1977,
+      "sinopsis": "La lucha de Luke Skywalker contra el Imperio Galáctico y su búsqueda de la princesa Leia."
+    }
+  ]
+  
+  

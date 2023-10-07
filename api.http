@@ -1,0 +1,9 @@
+//Recuperar todas las peliculas
+PATCH http://localhost:3000/movies/4feaf729-16e1-42ba-a045-d2650fca34b0
+Content-Type: application/json
+
+{
+    "año": 1995
+}
+
+

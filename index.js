@@ -83,8 +83,10 @@ app.patch('/movies/:id', (req, res) => {
     return res.json(updateMovie)
 })
 
-app.listen(3000, () => {
-    console.log('rulando en el puerto 3000')
+const PORT = process.env.PORT ?? 3000
+
+app.listen(PORT, () => {
+    console.log(`rulando en el puerto ${PORT}`)
 })
 /*const http = require('http')
 

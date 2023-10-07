@@ -2,6 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const movies = require('./movies.json')
 const crypto = require('node:crypto')
+const cors = require('cors')
 const { validateMovie, validatePartialMovie } = require('./schemas/movies')
 
 const app = express()
@@ -11,6 +12,7 @@ const test = (req, res, next) => {
 }
 
 app.use(express.json())
+app.use(cors())
 app.use(test)
 app.use(morgan('dev'))
 
@@ -38,7 +40,6 @@ app.post('/movies', (req, res) => {
 })
 
 app.get('/movies', (req, res) => {
-    res.header('Access-Control-Allow-Origin', '*')
     res.json(movies)
 })
 

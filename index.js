@@ -1,29 +1,32 @@
-const express = require('express')
-const morgan = require('morgan')
-const movies = require('./movies.json')
-const crypto = require('node:crypto')
-const cors = require('cors')
-const { validateMovie, validatePartialMovie } = require('./schemas/movies')
+require('./database')
+const express = require('express');
+const morgan = require('morgan');
+const movies = require('./movies.json');
+const crypto = require('crypto'); // Nota: Node.js tiene un módulo llamado 'crypto', no 'node:crypto'.
+const cors = require('cors');
+const { validateMovie, validatePartialMovie } = require('./schemas/movies');
 
-const app = express()
+const app = express();
+
 const test = (req, res, next) => {
-    console.log('Esto es un middleware')
-    next()
-}
+    console.log('Esto es un middleware');
+    next();
+};
 
-app.use(express.json())
-app.use(cors())
-app.use(test)
-app.use(morgan('dev'))
+app.use(express.json());
+app.use(cors());
+app.use(morgan('dev'));
+app.use(require('./routes'));
+
+app.use(test);
 
 app.get('/', (req, res) => {
-    console.log('acceso al get')
+    console.log('acceso al get');
     res.json({
         nombre: 'jozef',
         edad: 23
-    })
-})
-
+    });
+});
 
 app.post('/movies', (req, res) => {
 
